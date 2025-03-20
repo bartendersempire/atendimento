@@ -36,13 +36,13 @@ body {
     left: 50%; /* Posiciona o botão no centro horizontalmente */
     transform: translateX(-50%); /* Ajusta a posição para garantir que o botão esteja perfeitamente centralizado */
     width: 50%;
-    height: 5vh;
+    height: 7vh;
     background-color: #f1f1f1; /* Cor de fundo do botão */
     border: 1px solid #ccc; /* Borda do botão */
     cursor: pointer;
     padding: 10px;
-    font-size: 26px; /* Ajusta o tamanho do texto do botão */
-
+    font-size: 28px; /* Ajusta o tamanho do texto do botão */
+    text-align: center;
 
 }
 .enviar:hover{
@@ -54,12 +54,14 @@ body {
     position: absolute;
     left: 0%; /* Posiciona o botão à esquerda */
     top: 3%; /* Ajusta a distância do topo */
-    padding: 1% 6%;
+    width: 10%;
+    height: 7vh;
     background-color: #f1f1f1;
     border: 0.8% solid #ccc;
     cursor: pointer;
     margin-left: 1%;
-    font-size: 120%;
+    font-size: 28px;
+    text-align: center;
 }
 .voltar:hover { 
     opacity: 0.7;
@@ -127,8 +129,9 @@ label {
     margin: 0 auto; /* Garante que o conteúdo será centralizado */
 }
 .nome {
-height: 3vh;
+height: 2vh;
     width: 45%;
+    font-size: 20px;
 }
 .titulo {
  
@@ -146,7 +149,7 @@ height: 3vh;
     height: 3vh;
     width: 45%;
     border-top: 100% ;
-    
+    font-size: 20px;
 }
 
 
@@ -165,7 +168,7 @@ height: 3vh;
             display: none; /* Inicialmente o texto está oculto */
             margin-top: 10px;
             font-size: 18px;
-            background-color: #6f6f6f;
+            background-color: #2e2e2e;
             padding: 10px;
             border-radius: 5px;
             right: 10%;
@@ -194,8 +197,8 @@ height: 3vh;
         <h3 class="titulo2">Escolha os serviços desejados:</h3>
         <form>
             <!-- Campo para o nome -->
-            <label for="nome">Seu nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="nome" >
+            <label for="nome" style="font-size: 24px;">Seu nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui...(É obrigatório)" class="nome" >
             <br><br><br>
            
            
@@ -205,10 +208,14 @@ height: 3vh;
 
 
             <div class="checkbox-container">
-                <h2 class="titulo">Vodka</h2> <label  class="titulo"> <input type="checkbox" value="todos os itens do menu da Vodka"> </label>
+                <h2 class="titulo">Vodka</h2> <label name="Vodka" class="titulo"> <input type="checkbox" value="todos os itens do menu da Vodka">  <!-- ícone de interrogação -->
+                    <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
+                    <div class="texto-ajuda">Este botão é para selecionar todos os itens da lista, vodka, isto serve para todo botão abaixo do título.</div><br><br> </label>
                 <div class="linha-horizontal"></div> <!-- Linha horizontal -->
+
+
                 <br><br>
-                <div class="texto">
+                <div  name="bebidas"class="texto">
                  <label><input type="checkbox"  value="Blue Langoon"> Blue Langoon   <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
                     <div class="texto-ajuda">Vodka, curaçau blue, limão, xarope de açúcar e água com gás.</div><br><br></label>
@@ -385,7 +392,7 @@ height: 3vh;
     
                          <br><br> <br>
                          <label><input type="checkbox" value="Tônica Rosé"> Tônica Rosé <!-- ícone de interrogação -->
-                           <span class="icone-ajuda" style=" top: 419%; right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
+                           <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
                            <div class="texto-ajuda">Gin, água tônica rosé, mexerica e suco de limão.</div><br><br></label>
                            
       
@@ -400,7 +407,7 @@ height: 3vh;
                             <br>  <br>
                             <br>
                             <label><input type="checkbox" value="Tônica de Xaropes"> Tônica de Xaropes <!-- ícone de interrogação -->
-                            <span class="icone-ajuda" style=" top: 447%; right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
+                            <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
                             <div class="texto-ajuda"> Gin, água tônica e xarope à sua escolha
                             </div><br><br></label>
                             
@@ -511,20 +518,20 @@ height: 3vh;
                     
 
                     <br><br> <br>
-                    <label><input type="checkbox" value="Candy Blood"> Candy Blood <br><br><span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
+                    <label><input type="checkbox" value="Candy Blood"> Candy Blood <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
                     <!-- ícone de interrogação -->
-                    <div class="texto-ajuda"> Uva verde, cereja, xarope de cereja, suco de limão e água com gás.</div></label>
+                    <div class="texto-ajuda"> Uva verde, cereja, xarope de cereja, suco de limão e água com gás.</div><br><br></label>
                     
                     <br><br> <br>
-                    <label><input type="checkbox" value="Sol e Mar"> Sol e Mar <br><br>
+                    <label><input type="checkbox" value="Sol e Mar"> Sol e Mar 
                         <!-- ícone de interrogação -->
                         <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                  <div class="texto-ajuda"> Xarope de curaçau blue e suco de laranja.</div></label>
+                  <div class="texto-ajuda"> Xarope de curaçau blue e suco de laranja.</div><br><br></label>
                     <br><br> <br>
-                    <label><input type="checkbox" value="Pink Tonic"> Pink Tonic <br><br>
+                    <label><input type="checkbox" value="Pink Tonic"> Pink Tonic 
                         <!-- ícone de interrogação -->
                          <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> Chá rosa, xarope de açúcar e água tônica.</div></label>
+                    <div class="texto-ajuda"> Chá rosa, xarope de açúcar e água tônica.</div><br><br></label>
                     
                     <br>
                     <br><br>
@@ -627,13 +634,13 @@ height: 3vh;
                     <br><br> <br>
                     <label><input type="checkbox" value="Caipirissima de coco"> Caipirissima de coco <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> .</div><br><br></label>
+                    <div class="texto-ajuda">Rum, abacaxi, xarope de coco e hortelä.</div><br><br></label>
                     
 
                     <br><br> <br>
                     <label><input type="checkbox" value="Piña Colada"> Piña Colada <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> .</div><br><br></label>
+                    <div class="texto-ajuda">Rum, abacaxi, creme de leite e leite de coco.</div><br><br></label>
                     
 
                     <br>
@@ -652,19 +659,19 @@ height: 3vh;
                     <br><br> <br>
                     <label><input type="checkbox" value="Margarita de Abacaxi e Manjericão"> Margarita de Abacaxi e Manjericão<!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div> <br><br></label>
+                    <div class="texto-ajuda">Tequila, abacaxi, manjericão, licor de laranja e suco de limão.</div> <br><br></label>
                     
 
                     <br><br> <br>
                     <label><input type="checkbox" value="Passion Margarita"> Passion Margarita <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Tequila, suco de limão, licor de laranja e suco de maracujá roxo.</div><br><br></label>
                     
 
                     <br><br> <br>
                     <label><input type="checkbox" value="Apple smash"> Apple smash <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Tequila, maçă verde, suco de maracujá, xarope de açúcar e hortelä.</div><br><br></label>
                     
 
                     <br>
@@ -684,31 +691,31 @@ height: 3vh;
                     <br><br> <br>
                     <label><input type="checkbox" value="Whisky Smash"> Whisky Smash <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Whisky, limão siciliano, açúcar e hortelä.</div><br><br></label>
                     
 
                     <br> <br> <br>
                     <label><input type="checkbox" value="Whisky Sour"> Whisky Sour <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Whisky, suco de limão siciliano e xarope de açúcar.</div><br><br></label>
                     
 
                     <br> <br> <br>
                     <label><input type="checkbox" value="Honey Cobbler"> Honey Cobbler <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Whisky, vinho tinto seco, licor creme de cassis e mel.</div><br><br></label>
                     
 
                     <br> <br> <br>
                     <label><input type="checkbox" value="Rob Roy"> Rob Roy <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Whisky, vermute seco e angustura.</div><br><br></label>
                     
 
                     <br> <br> <br>
                     <label><input type="checkbox" value="Godfather"> Godfather <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Whisky e amaretto.</div><br><br></label>
                     
 
                     <br>
@@ -727,19 +734,19 @@ height: 3vh;
                     <br><br> <br>
                     <label><input type="checkbox" value="Americano"> Americano <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Campari, vermute e água com gás.</div><br><br></label>
                     
 
                     <br> <br> <br>
                     <label><input type="checkbox" value="Negroni"> Negroni <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Campari, espumante e vermute tinto.</div><br><br></label>
                     
 
                     <br> <br> <br>
                     <label><input type="checkbox" value="Campari"> Campari <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">.</div><br><br></label>
+                    <div class="texto-ajuda">Campari, vodka, xarope de hibisco, suco de laranja, suco de limão e água tônica.</div><br><br></label>
                     
 
                     <br> 
@@ -759,7 +766,7 @@ height: 3vh;
                     <br><br> <br>
                     <label for="drinkEspecial">Você escolhe um drink que não está no meu menu.</label>
                     <br><br>
-                    <input type="text" id="drinkEspecial" name="drinkEspecial" placeholder="Digite seu drink" class="drinkEspecial" >
+                    <input type="text" id="drinkEspecial" name="drinkEspecial" placeholder="Digite seu drink..." class="drinkEspecial" >
                     <br><br>
                     <br><br><br><br><br><br><br><br><br><br><br><br>
                 
@@ -797,6 +804,7 @@ height: 3vh;
     
 
     <script>
+
         // Desativa o zoom no foco do campo
 document.querySelector('input, textarea').addEventListener('focus', function() {
   document.body.style.zoom = '1';
