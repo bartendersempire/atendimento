@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Escolha os serviços</title>
     <style>
+
 body {
     background-color: black;
     font-family: 'Times New Roman', serif;
@@ -28,7 +29,7 @@ body {
     border: 1px solid #ccc; /* Borda do botão */
     cursor: pointer;
     padding: 10px;
-    font-size: 16px; /* Ajusta o tamanho do texto do botão */
+    font-size: 115%; /* Ajusta o tamanho do texto do botão */
 
 
 }
@@ -73,20 +74,20 @@ body {
 }
 
 .texto {
-    text-size-adjust: 120px;
+    text-size-adjust: 100%;
 }
 
 /* Tamanho dos textos das opções */
 h3 {
-    font-size: 28px; /* Aumentando o tamanho do título "Escolha os serviços desejados" */
+    font-size: 32px; /* Aumentando o tamanho do título "Escolha os serviços desejados" */
 }
 
 h2 {
-    font-size: 24px; /* Aumentando o tamanho dos títulos das seções de bebidas */
+    font-size: 28px; /* Aumentando o tamanho dos títulos das seções de bebidas */
 }
 
 label {
-    font-size: 20px; /* Aumentando o tamanho dos textos das opções de checkbox */
+    font-size: 24px; /* Aumentando o tamanho dos textos das opções de checkbox */
 }
 
 /* Centraliza as opções de checkbox e seus textos */
@@ -181,7 +182,7 @@ height: 3vh;
         <h3 class="titulo2">Escolha os serviços desejados:</h3>
         <form>
             <!-- Campo para o nome -->
-            <label for="nome">Seu nome teste:</label>
+            <label for="nome">Seu nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="nome" >
             <br><br><br>
            
@@ -503,13 +504,15 @@ height: 3vh;
                     <div class="texto-ajuda"> Uva verde, cereja, xarope de cereja, suco de limão e água com gás.</div></label>
                     
                     <br><br> <br>
-                    <label><input type="checkbox" value="Sol e Mar"> Sol e Mar <br><br><span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                  <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Sol e Mar"> Sol e Mar <br><br>
+                        <!-- ícone de interrogação -->
+                        <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
                   <div class="texto-ajuda"> Xarope de curaçau blue e suco de laranja.</div></label>
                     <br><br> <br>
-                    <label><input type="checkbox" value="Pink Tonic"> Pink Tonic <br><br><span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
+                    <label><input type="checkbox" value="Pink Tonic"> Pink Tonic <br><br>
+                        <!-- ícone de interrogação -->
+                         <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
                     <div class="texto-ajuda"> Chá rosa, xarope de açúcar e água tônica.</div></label>
-                    <!-- ícone de interrogação -->
                     
                     <br>
                     <br><br>
@@ -573,52 +576,53 @@ height: 3vh;
                     
                     
                     <br><br> <br>
-                    <label><input type="checkbox" value="Daiquiri"> Daiquiri <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Daiquiri"> Daiquiri 
+                        <!-- ícone de interrogação -->
+                        <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
+                        <div class="texto-ajuda"> Rum, suco de limão e açúcar.</div><br><br></label>
+                    
+
+                    <br><br> <br>
+                    <label><input type="checkbox" value="Strawberry Daiquiri"> Strawberry Daiquiri <!-- ícone de interrogação -->
+                    <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
+                    <div class="texto-ajuda"> Rum, morango, xarope de açúcar e suco de limão.</div><br><br></label>
+                    
+
+                    <br><br> <br>
+                    <label><input type="checkbox" value="Caipirissima de Maracujá e Melancia"> Caipirissima de Maracujá e Melancia <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> Rum, suco de limão e açúcar.</div>
+                    <div class="texto-ajuda"> Rum, maracujá, melancia, suco de limão, mel e manjericão.</div><br><br></label>
+                    
 
                     <br><br> <br>
-                    <label><input type="checkbox" value="Strawberry Daiquiri"> Strawberry Daiquiri <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Banana Colada"> Banana Colada <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> Rum, morango, xarope de açúcar e suco de limão.</div>
+                    <div class="texto-ajuda"> Rum, creme de coco, banana, suco de abacaxi e açúcar.</div><br><br></label>
+                    
 
                     <br><br> <br>
-                    <label><input type="checkbox" value="Caipirissima de Maracujá e Melancia"> Caipirissima de Maracujá e Melancia <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Rum Rosé"> Rum Rosé <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> Rum, maracujá, melancia, suco de limão, mel e manjericão.</div>
+                    <div class="texto-ajuda"> Rum, morango e água tônica rosé.</div><br><br></label>
+                    
 
                     <br><br> <br>
-                    <label><input type="checkbox" value="Banana Colada"> Banana Colada <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Rum tropical"> Rum tropical <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> Rum, creme de coco, banana, suco de abacaxi e açúcar.</div>
+                    <div class="texto-ajuda"> Rum, água de coco, suco de abacaxi e suco de limão.</div><br><br></label>
+                    
 
                     <br><br> <br>
-                    <label><input type="checkbox" value="Rum Rosé"> Rum Rosé <br><br></label>
-                    <!-- ícone de interrogação -->
-                    <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> Rum, morango e água tônica rosé.</div>
-
-                    <br><br> <br>
-                    <label><input type="checkbox" value="Rum tropical"> Rum tropical <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Caipirissima de coco"> Caipirissima de coco <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> Rum, água de coco, suco de abacaxi e suco de limão.</div>
+                    <div class="texto-ajuda"> .</div><br><br></label>
+                    
 
                     <br><br> <br>
-                    <label><input type="checkbox" value="Caipirissima de coco"> Caipirissima de coco <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Piña Colada"> Piña Colada <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> .</div>
-
-                    <br><br> <br>
-                    <label><input type="checkbox" value="Piña Colada"> Piña Colada <br><br></label>
-                    <!-- ícone de interrogação -->
-                    <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda"> .</div>
+                    <div class="texto-ajuda"> .</div><br><br></label>
+                    
 
                     <br>
                     <br><br>
@@ -634,22 +638,22 @@ height: 3vh;
                     
                     
                     <br><br> <br>
-                    <label><input type="checkbox" value="Margarita de Abacaxi e Manjericão"> Margarita de Abacaxi e Manjericão <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Margarita de Abacaxi e Manjericão"> Margarita de Abacaxi e Manjericão<!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div> <br><br></label>
+                    
 
                     <br><br> <br>
-                    <label><input type="checkbox" value="Passion Margarita"> Passion Margarita <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Passion Margarita"> Passion Margarita <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br><br> <br>
-                    <label><input type="checkbox" value="Apple smash"> Apple smash <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Apple smash"> Apple smash <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br>
                     <br><br>
@@ -666,34 +670,34 @@ height: 3vh;
                     
                     
                     <br><br> <br>
-                    <label><input type="checkbox" value="Whisky Smash"> Whisky Smash <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Whisky Smash"> Whisky Smash <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style=" right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br> <br> <br>
-                    <label><input type="checkbox" value="Whisky Sour"> Whisky Sour <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Whisky Sour"> Whisky Sour <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br> <br> <br>
-                    <label><input type="checkbox" value="Honey Cobbler"> Honey Cobbler <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Honey Cobbler"> Honey Cobbler <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br> <br> <br>
-                    <label><input type="checkbox" value="Rob Roy"> Rob Roy <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Rob Roy"> Rob Roy <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br> <br> <br>
-                    <label><input type="checkbox" value="Godfather"> Godfather <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Godfather"> Godfather <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br>
                     <br><br>
@@ -709,22 +713,22 @@ height: 3vh;
                     
                     
                     <br><br> <br>
-                    <label><input type="checkbox" value="Americano"> Americano <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Americano"> Americano <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br> <br> <br>
-                    <label><input type="checkbox" value="Negroni"> Negroni <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Negroni"> Negroni <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br> <br> <br>
-                    <label><input type="checkbox" value="Campari"> Campari <br><br></label>
-                    <!-- ícone de interrogação -->
+                    <label><input type="checkbox" value="Campari"> Campari <!-- ícone de interrogação -->
                     <span class="icone-ajuda" style="right: 10.9%;"  onclick="toggleTextoAjuda(this)"><b>?</b></span>
-                    <div class="texto-ajuda">Aqui está um texto de ajuda para o primeiro ícone.</div>
+                    <div class="texto-ajuda">.</div><br><br></label>
+                    
 
                     <br> 
                     
@@ -745,8 +749,8 @@ height: 3vh;
                     <br><br>
                     <input type="text" id="drinkEspecial" name="drinkEspecial" placeholder="Digite seu drink" class="drinkEspecial" >
                     <br><br>
-                    
-                    
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                
          
          
                 </div>
