@@ -2,10 +2,21 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <title>Escolha os serviços</title>
     <style>
+/* Impede que a página mude ao focar no input */
+input, textarea {
+  font-size: 16px; /* Certifique-se de que a fonte não mude com o foco */
+  line-height: 1.5; /* Ajuda a manter o layout estável */
+  padding: 10px; /* Ajuste conforme necessário */
+}
+
+/* Evitar problemas com o teclado virtual */
+body {
+  overflow-x: hidden;
+}
 
 body {
     background-color: black;
@@ -786,6 +797,11 @@ height: 3vh;
     
 
     <script>
+        // Desativa o zoom no foco do campo
+document.querySelector('input, textarea').addEventListener('focus', function() {
+  document.body.style.zoom = '1';
+});
+
 
         // A função que alterna a exibição do texto de ajuda
         function toggleTextoAjuda(element) {
