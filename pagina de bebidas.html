@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Escolha os serviços</title>
     <style>
 
@@ -783,29 +783,18 @@ height: 3vh;
         </form>
     </div>
     
-    
-
-
-
-    
-
-
-
-
-
 
     <script>
 
-  // A função que alterna a exibição do texto de ajuda
-  function toggleTextoAjuda(element) {
+        // A função que alterna a exibição do texto de ajuda
+        function toggleTextoAjuda(element) {
             // Encontra o próximo elemento <div> com a classe texto-ajuda
             let textoAjuda = element.nextElementSibling;
-
             // Alterna entre mostrar e esconder o texto
             if (textoAjuda.style.display === "none" || textoAjuda.style.display === "") {
-                textoAjuda.style.display = "block"; // Mostra o texto
+                 textoAjuda.style.display = "block"; // Mostra o texto
             } else {
-                textoAjuda.style.display = "none"; // Oculta o texto
+                 textoAjuda.style.display = "none"; // Oculta o texto
             }
         }
 
