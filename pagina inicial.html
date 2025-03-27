@@ -67,7 +67,7 @@
 /* Botões Instagram e WhatsApp */
 .whatsapp {
     font-size: 20px;
-    position:  absolute;
+    position:  flexbox;
     align-items: center;   /* Alinha verticalmente */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     text-decoration: none;
@@ -83,7 +83,7 @@
 }
 .botao-instagram {
     font-size: 20px;
-    position: absolute;
+    position: flexbox;
     align-items: center;   /* Alinha verticalmente */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     text-decoration: none;
@@ -172,22 +172,20 @@
         }
 
  /* Ajuste para telas menores */
-        @media screen and (max-width: 1083px) {
-            .whatsapp {
-                bottom: 10%;
-                margin-left: 5%;
-                width: 40%; /* Ajuste o tamanho conforme necessário */
-                 bottom:-55%;
-            }
+     @media screen and (max-width: 1083px) {
+    .whatsapp {
+        bottom: -22%;
+        margin-left: 5%;
+        width: 40%;
+    }
 
-            .botao-instagram {
-                bottom: 5%;
-                margin-left: 50%; /* Ajuste para uma posição central */
-                width: 40%; /* Ajuste o tamanho conforme necessário */
-                 bottom:-55%;
-            }
-        }
-  
+    .botao-instagram {
+        bottom: -5%;
+        margin-left: 50%;
+        width: 40%;
+    }
+}
+
     </style>
 </head>
 
@@ -203,10 +201,10 @@
             Nossa equipe trabalha como bartender,<br> 
             ornamentações de festas. Oferecemos o <br> 
             melhor atendimento para que todos  <br>
-            aproveitem ao máximoa festa, com uma  <br>
+            aproveitem ao máximo a festa, com uma  <br>
             decoração bem feita e drinks lindos<br>
             e deliciosos! <br> 
-            Trabalhamosem Virginópolis e região.
+            Trabalhamos em Virginópolis e região.
         </p>
 
         <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="bebida2">
@@ -217,16 +215,12 @@
             <button type="submit" class="botao-festa" style="font-size: 19px;">Organizções de festas</button>
         </form>
     </div>
-
-<script>
-    globalThis= cidade;
-</script>
     <!-- Botão Instagram -->
     <div class="conteudo">
         <p style="font-size: 19px;">Caso queira entrar em contato conosco, basta acessar o link abaixo:</p>
     </div>
      <br><br><br> <br><br><br> <br>
-        <a href="https://www.instagram.com/bartenders_empire/?hl=pt-br" class="botao-instagram" class="conteudo">
+        <a href="https://www.instagram.com/bartenders_empire/?hl=pt-br" class="botao-instagram">
             <img src="unnamed.png" alt="Instagram" class="instagram-img">
             Nosso Instagram
         </a>
