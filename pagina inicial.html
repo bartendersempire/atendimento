@@ -12,43 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
   
     <style>
-
-   @media screen and (max-width: 1083px){
-  
-.whatsapp {
-    position:  absolute;
-    display: flex; /* Adiciona display flex */
-    align-items: center;   /* Alinha verticalmente */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    text-decoration: none;
-    background-color:rgb(225, 225, 225);
-    color: black;
-    
-    border-radius: 3%;
-    font-weight: bold;
-    width: 30%;
-    height: 8%;
-    margin-left: 13%; /* Adiciona espaço entre os botões */
-    bottom:-20%;
-}
-.botao-instagram {
-
-    position: absolute;
-    display: flex; /* Adiciona display flex */
-    align-items: center;   /* Alinha verticalmente */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    text-decoration: none;
-    background-color: rgb(225, 225, 225);
-    color: black;
-    padding: 1% 2%;
-    border-radius: 3%;
-    font-weight: bold;
-    bottom: 0;
-   margin-top:100%;
-    margin-left: 55%; /* Adiciona espaço entre os botões */
-}
-     }
-        
         body {
             background-color: black;
             font-family: 'Times New Roman', serif;
@@ -70,7 +33,6 @@
         .conteudo {
             flex: 2;
             margin-top:-1%;
-
         }
 
         /* Botões principais (Menu de bebidas e festa) */
@@ -90,129 +52,63 @@
         }
 
         /* Rodapé */
-      
-        
         .whatsappimg, .instagram-img {
-             display: flex;
-    width: 12%;
-    border-radius: 50%;  /* Tornar as imagens circulares */
-    top:center;
-}
-
-
-
-/* Botões Instagram e WhatsApp */
-.whatsapp {
-    font-size: 20px;
-    position:  absolute;
-    align-items: center;   /* Alinha verticalmente */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    text-decoration: none;
-    background-color:rgb(225, 225, 225);
-    color: black;
-    padding: 1% 2%;
-    border-radius: 3%;
-    font-weight: bold;
-    width: 30%;
-    height: 8%;
-    margin-left: 13%; /* Adiciona espaço entre os botões */
-    bottom:-20%;
-}
-.botao-instagram {
-    font-size: 20px;
-    position: absolute;
-    align-items: center;   /* Alinha verticalmente */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    text-decoration: none;
-    background-color: rgb(225, 225, 225);
-    color: black;
-    padding: 1% 2%;
-    border-radius: 3%;
-    font-weight: bold;
-    width: 30%;
-    height: 8%;
-    margin-left: 53%; /* Adiciona espaço entre os botões */
-    bottom:-20%;
-}
-.botao-instagram:hover, .whatsapp:hover {
-    opacity: 0.5;
-}
-
-
-
-        /* Ajuste o tamanho da caixa de texto aqui para o computador */
-        .dados {
-            width: 50%;
-            height: 3vh;
+            display: flex;
+            width: 12%;
+            border-radius: 50%;  /* Tornar as imagens circulares */
+            top: center;
         }
 
-        .enviar {
-            width: 7%;
-            height: 5vh;
-        }
-
-        .bebidas {
+        /* Botões Instagram e WhatsApp */
+        .whatsapp, .botao-instagram {
+            font-size: 20px;
             position: absolute;
-            top: 65%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 1vh 0;
-            text-align: center;
+            display: flex; /* Adiciona display flex */
+            align-items: center;   /* Alinha verticalmente */
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+            text-decoration: none;
+            background-color: rgb(225, 225, 225);
+            color: black;
+            padding: 1% 2%;
+            border-radius: 3%;
+            font-weight: bold;
+            width: 30%;
+            height: 8%;
+            bottom: -20%;
         }
 
-        .checkbox-container {
-            text-align: left;
-            display: inline-block;
+        .whatsapp {
+            margin-left: 13%; /* Adiciona espaço entre os botões */
         }
 
-        .checkbox-container label {
-            display: block;
+        .botao-instagram {
+            margin-left: 53%; /* Adiciona espaço entre os botões */
         }
 
-        .festa {
-            display: absolute;
-            justify-content: center;
-            margin-top: 2vh;
-            
+        .botao-instagram:hover, .whatsapp:hover {
+            opacity: 0.5;
         }
 
-        .bebida2 {
-            display: absolute;
-        
-            margin-top: 5vh;
-           
-        }
+        /* Ajuste para telas menores */
+        @media screen and (max-width: 1083px) {
+            .whatsapp {
+                bottom: 5%;
+                margin-left: 5%;
+                width: 40%; /* Ajuste o tamanho conforme necessário */
+            }
 
-        .cidade {
-           
-            margin-top: 5vh;
-        }
-        .botao-festa{
-            width: 80%;
-            margin: 5;
-        }
-        .botao-bebidas {
-            width: 80%;
-            margin: 5;
-        }
-        .linha-horizontal {
-    height: 2px; /* Espessura da linha */
-    background-color: rgb(132, 110, 0); /* Cor da linha */
-    flex-grow: 1; /* Faz com que a linha ocupe o espaço restante */
-    margin: 0 1vh; /* Adiciona espaçamento entre a logo e o título */
-}
-
-.logo {
-  margin-right: 20px; /* Ajusta o espaço entre a logo e o título */
-            width: 200px;
-            height: 200px;
-
+            .botao-instagram {
+                bottom: 5%;
+                margin-left: 50%; /* Ajuste para uma posição central */
+                width: 40%; /* Ajuste o tamanho conforme necessário */
+            }
         }
     </style>
 </head>
 
 <body>
     <div>
-        <img  class="logo" src="logo.jpeg">
+        <img class="logo" src="logo.jpeg">
         <div class="linha-horizontal"></div> <!-- Linha horizontal -->
     </div>
     
@@ -229,7 +125,7 @@
         </p>
 
         <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="bebida2">
-            <button type="submit" class="botao-bebidas"  style="font-size: 19px;">Menu de bebidas</button>
+            <button type="submit" class="botao-bebidas" style="font-size: 19px;">Menu de bebidas</button>
         </form>
         
         <form id="pedidoForm" onsubmit="event.preventDefault(); festa();" class="festa">
@@ -237,9 +133,19 @@
         </form>
     </div>
 
-<script>
-    globalThis= cidade;
-</script>
+    <script>
+        function enviar() {
+            // Abre a próxima página
+            window.location.href = "pagina de bebidas.html";
+        }
+
+        function festa() {
+            let cidade = document.getElementById("cidade").value.trim(); 
+            // Abre a próxima página
+            window.location.href = "pagina de festas.html";
+        }
+    </script>
+
     <!-- Botão Instagram -->
     <div class="conteudo">
         <p style="font-size: 19px;">Caso queira entrar em contato conosco, basta acessar o link abaixo:</p>
@@ -255,19 +161,5 @@
             <img src="whatsapp.png" alt="WhatsApp" class="whatsappimg">
        Nosso WhatsApp 
         </a>
-
-    <script>
-        function enviar() {
-            // Abre a próxima página
-            window.location.href = "pagina de bebidas.html";
-        }
-
-        function festa() {
-            let cidade = document.getElementById("cidade").value.trim(); 
-            // Abre a próxima página
-            window.location.href = "pagina de festas.html";
-        }
-    </script>
-
 </body>
 </html>
