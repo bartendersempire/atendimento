@@ -33,7 +33,6 @@
         .conteudo {
             flex: 2;
             margin-top:-1%;
-
         }
 
         /* Botões principais (Menu de bebidas e festa) */
@@ -52,147 +51,73 @@
             opacity: 0.5;
         }
 
-        /* Rodapé */
-      
-        
         .whatsappimg, .instagram-img {
             display: flex;
-    width: 12%;
-    border-radius: 50%;  /* Tornar as imagens circulares */
-    top:center;
-}
-
-
-
-/* Botões Instagram e WhatsApp */
-.whatsapp {
-    font-size: 20px;
-    position:  flexbox;
-    align-items: center;   /* Alinha verticalmente */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    text-decoration: none;
-    background-color:rgb(225, 225, 225);
-    color: black;
-    padding: 1% 2%;
-    border-radius: 3%;
-    font-weight: bold;
-    width: 30%;
-    height: 8%;
-    margin-left: 13%; /* Adiciona espaço entre os botões */
-    bottom:-55%;
-}
-.botao-instagram {
-    font-size: 20px;
-    position: flexbox;
-    align-items: center;   /* Alinha verticalmente */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    text-decoration: none;
-    background-color: rgb(225, 225, 225);
-    color: black;
-    padding: 1% 2%;
-    border-radius: 3%;
-    font-weight: bold;
-    width: 30%;
-    height: 8%;
-    margin-left: 53%; /* Adiciona espaço entre os botões */
-    bottom:-55%;
-}
-.botao-instagram:hover, .whatsapp:hover {
-    opacity: 0.5;
-}
-
-
-
-        /* Ajuste o tamanho da caixa de texto aqui para o computador */
-        .dados {
-            width: 50%;
-            height: 3vh;
+            width: 12%;
+            border-radius: 50%;
+            top:center;
+            max-width: 100%;
         }
 
-        .enviar {
-            width: 7%;
-            height: 5vh;
-        }
-
-        .bebidas {
+        .whatsapp, .botao-instagram {
+            font-size: 20px;
             position: absolute;
-            top: 65%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 1vh 0;
-            text-align: center;
-        }
-
-        .checkbox-container {
-            text-align: left;
-            display: inline-block;
-        }
-
-        .checkbox-container label {
-            display: block;
-        }
-
-        .festa {
-            display: absolute;
+            align-items: center;
             justify-content: center;
-            margin-top: 2vh;
-            
+            text-decoration: none;
+            background-color:rgb(225, 225, 225);
+            color: black;
+            padding: 1% 2%;
+            border-radius: 3%;
+            font-weight: bold;
+            width: 30%;
+            height: 8%;
+            margin-left: 13%;
+            bottom:-20%;
         }
 
-        .bebida2 {
-            display: absolute;
-        
-            margin-top: 5vh;
-           
+        .botao-instagram {
+            margin-left: 53%;
         }
 
-        .cidade {
-           
-            margin-top: 5vh;
+        .botao-instagram:hover, .whatsapp:hover {
+            opacity: 0.5;
         }
-        .botao-festa{
-            width: 80%;
-            margin: 5;
-        }
-        .botao-bebidas {
-            width: 80%;
-            margin: 5;
-        }
+
         .linha-horizontal {
-    height: 2px; /* Espessura da linha */
-    background-color: rgb(132, 110, 0); /* Cor da linha */
-    flex-grow: 1; /* Faz com que a linha ocupe o espaço restante */
-    margin: 0 1vh; /* Adiciona espaçamento entre a logo e o título */
-}
+            height: 2px;
+            background-color: rgb(132, 110, 0);
+            flex-grow: 1;
+            margin: 0 1vh;
+        }
 
-.logo {
-  margin-right: 20px; /* Ajusta o espaço entre a logo e o título */
+        .logo {
+            margin-right: 20px;
             width: 200px;
             height: 200px;
-
         }
 
- /* Ajuste para telas menores */
-     @media screen and (max-width: 400px) {
-    .whatsapp {
-        bottom: -22%;
-        margin-left: 5%;
-        width: 40%;
-    }
+        /* Responsividade */
+        @media screen and (max-width: 1083px) {
+            .whatsapp {
+                bottom: 10%;
+                margin-left: 5%;
+                width: 100%;
+            }
 
-    .botao-instagram {
-        bottom: -5%;
-        margin-left: 50%;
-        width: 40%;
-    }
-}
-
+            .botao-instagram {
+                bottom: 5%;
+                margin-left: 50%;
+                width: 40%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div>
-        <img  class="logo" src="logo.jpeg">
-        <div class="linha-horizontal"></div> <!-- Linha horizontal -->
+        <img class="logo" src="logo.jpeg">
+        <div class="linha-horizontal"></div>
     </div>
     
     <div class="conteudo">
@@ -208,41 +133,38 @@
         </p>
 
         <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="bebida2">
-            <button type="submit" class="botao-bebidas"  style="font-size: 19px;">Menu de bebidas</button>
+            <button type="button" class="botao-bebidas" style="font-size: 19px;">Menu de bebidas</button>
         </form>
         
         <form id="pedidoForm" onsubmit="event.preventDefault(); festa();" class="festa">
-            <button type="submit" class="botao-festa" style="font-size: 19px;">Organizções de festas 01</button>
+            <button type="button" class="botao-festa" style="font-size: 19px;">Organizações de festas</button>
         </form>
     </div>
-    <!-- Botão Instagram -->
+
     <div class="conteudo">
         <p style="font-size: 19px;">Caso queira entrar em contato conosco, basta acessar o link abaixo:</p>
     </div>
-     <br><br><br> <br><br><br> <br>
-        <a href="https://www.instagram.com/bartenders_empire/?hl=pt-br" class="botao-instagram">
-            <img src="unnamed.png" alt="Instagram" class="instagram-img">
-            Nosso Instagram
-        </a>
+
+    <br><br><br><br><br><br><br>
     
-    <!-- Botão WhatsApp -->
-        <a href="https://api.whatsapp.com/send/?phone=553387031225&text=Ol%C3%A1%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas,%20voc%C3%AA%20est%C3%A1%20dispon%C3%ADvel?&type=phone_number&app_absent=0" class="whatsapp">
-            <img src="whatsapp.png" alt="WhatsApp" class="whatsappimg">
-       Nosso WhatsApp 
-        </a>
+    <a href="https://www.instagram.com/bartenders_empire/?hl=pt-br" class="botao-instagram">
+        <img src="unnamed.png" alt="Instagram" class="instagram-img">
+        Nosso Instagram
+    </a>
+    
+    <a href="https://api.whatsapp.com/send/?phone=553387031225&text=Ol%C3%A1%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas,%20voc%C3%AA%20est%C3%A1%20dispon%C3%ADvel?&type=phone_number&app_absent=0" class="whatsapp">
+        <img src="whatsapp.png" alt="WhatsApp" class="whatsappimg">
+        Nosso WhatsApp
+    </a>
 
     <script>
         function enviar() {
-            // Abre a próxima página
             window.location.href = "pagina de bebidas.html";
         }
 
         function festa() {
-            // Abre a próxima página
             window.location.href = "pagina de festas.html";
         }
     </script>
-
 </body>
 </html>
-       
