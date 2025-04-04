@@ -30,6 +30,10 @@ body {
     min-height: 100vh;
 }
 
+.teste{
+    font-family: Arial;
+}
+
 .enviar {
     position: fixed;
     bottom: 20px; /* Ajuste a distância do botão do fundo da página */
@@ -140,7 +144,7 @@ label {
 }
 .nome {
 height: 2vh;
-    width: 45%;
+    width:40%;
     font-size: 20px;
 }
 .titulo {
@@ -155,9 +159,9 @@ height: 2vh;
 .drinkEspecial {
     text-align: center;
     position: absolute;
-    left: 27%;
+    left: 29.25%;
     height: 2vh;
-    width: 45%;
+    width:40%;
     font-size: 20px;
     border-top: 100% ;
   
@@ -190,6 +194,15 @@ height: 2vh;
 
         .titulo2 {
             margin-top: 13%;
+           
+        }
+        .logo {
+            width: 50vh ;
+            height: 50vh;
+            margin-top: -7.2vh;
+            position: absolute;
+            right:37.8%;
+           
         }
 
          @media screen and (max-width: 1083px) {
@@ -212,38 +225,42 @@ height: 2vh;
                  height: 5.7vh;
                 
          }
+         .logo {
+                 width: 150px;
+            height: 150px;}
          }
     </style>
 </head>
 
 <body>
-    <a href="pagina inicial.html">
+    <img src="logo para bebida.png"  class="logo">
+    <a href="pagina inicial.html" >
         <button class="voltar"><b>Voltar</b></button>
     </a>
-<!-----div de Bebidas------>
+                                                    <!-----div de Bebidas------>
     <div>
         <h3 class="titulo2">Escolha os serviços desejados:</h3>
-        <p style="font-size: 24px;"> <b>Atenção, os seguintes dados são<br> 
+        <p style="font-size: 24px;" class="teste"> <b>Atenção, os seguintes dados são<br> 
                                         obrigatórios, confirmaremos se<br>
                                         estamos disponíveis à cidade e<br>
                                         data selecionada via WhatsApp.</b></p>
         <form>
             <!-- Campo para o nome -->
-            <label for="nome" style="font-size: 22px;">Seu nome:</label> <br>
+            <label for="nome" style="font-size: 22px;" class="teste">Seu nome:</label> <br>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui..." class="nome" >
             <br><br><br>
-            <label for="data" style="font-size: 22px; ">Digite a cidade:</label>
+            <label for="data" style="font-size: 22px; " class="teste" >Digite a cidade:</label>
             <br>
             <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="cidade">
             <input class="nome" type="text" id="cidade" name="cidade" placeholder="Sua Cidade">
             <br><br><br>
-            <label for="data" style="font-size: 22px;" >Escolha uma data para<br>
+            <label for="data" style="font-size: 22px;" class="teste" >Escolha uma data para<br>
                                                         seu evento, para checarmos<br>
                                                         e confirmaremos a data <br>
                                                         por WhatsApp:</label>
             <br>
             <br>
-            <input type="date" id="data" name="data" placeholder="Digite a data..." class="drinkEspecial" style="margin-right: 46%;">
+            <input type="text" id="data" name="data" placeholder="Digite a data..." class="drinkEspecial">
             <br><br><br>
            
            <!-- Linha horizontal -->
@@ -745,7 +762,7 @@ height: 2vh;
                     <div class="linha-horizontal"></div> <!-- Linha horizontal -->
                     
                     <br><br> <br>
-                    <label for="drinkEspecial" style="font-size: 24px;">Você escolhe um drink que não está no meu menu:</label>
+                    <label for="drinkEspecial" style="font-size: 24px;" class="teste">Você escolhe um drink que não está no meu menu:</label>
                     <br><br><br>
                     <input type="text" id="drinkEspecial" name="drinkEspecial" placeholder="Digite seu drink..." class="drinkEspecial" >
                     <br><br><br>
