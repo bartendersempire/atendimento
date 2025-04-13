@@ -59,12 +59,12 @@ body {
     position: absolute;
     left: 0%; /* Posiciona o botão à esquerda */
     top: 3%; /* Ajusta a distância do topo */
-    width: 9%;
+    width: 10vh;
     height: 4vh;
     background-color: #f1f1f1;
     border: 0.8% solid #ccc;
     cursor: pointer;
-    margin-left: 1%;
+    margin-left: 10vh;
     font-size: 19px;
     text-align: center;
     border-radius: 1vh;
@@ -211,7 +211,6 @@ height: 2vh;
         }
              .voltar {
                  width:15%;
-                
              }
 
 .texto {
@@ -224,18 +223,11 @@ height: 2vh;
             .enviar{
                  width: 30%;
                  height: 5.7vh;
-                
-         }
-         .logo {
+            }
+            .logo {
                  width: 150px;
-            height: 150px;
-         margin-top: -2vh;
-                right:33%;
-         }
-               .titulo2 {
-            margin-top: 20%;
-           
-        }
+                 height: 150px;
+            }
          }
     </style>
 </head>
@@ -245,7 +237,7 @@ height: 2vh;
     <a href="pagina inicial.html" >
         <button class="voltar"><b>Voltar</b></button>
     </a>
-                                                    <!-----div de Bebidas------>
+                            <!-----div de Bebidas------>
     <div>
         <h3 class="titulo2">Escolha os serviços desejados:</h3>
         <p style="font-size: 24px;" class="teste"> <b>Atenção, os seguintes dados são<br> 
@@ -255,12 +247,12 @@ height: 2vh;
         <form>
             <!-- Campo para o nome -->
             <label for="nome" style="font-size: 22px;" class="teste">Seu nome:</label> <br>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui..." class="nome" >
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui..." class="nome" maxlength="30" >
             <br><br><br>
-            <label for="data" style="font-size: 22px; " class="teste" >Digite a cidade:</label>
+            <label for="data" style="font-size: 22px; " class="teste"  >Digite a cidade:</label>
             <br>
             <form id="pedidoForm" onsubmit="event.preventDefault(); enviar();" class="cidade">
-            <input class="nome" type="text" id="cidade" name="cidade" placeholder="Sua Cidade">
+            <input class="nome" type="text" id="cidade" name="cidade" placeholder="Sua Cidade" maxlength="25">
             <br><br><br>
             <label for="data" style="font-size: 22px;" class="teste" >Escolha uma data para<br>
                                                         seu evento, para checarmos<br>
@@ -268,7 +260,7 @@ height: 2vh;
                                                         por WhatsApp:</label>
             <br>
             <br>
-            <input type="text" id="data" name="data" placeholder="Digite a data..." class="drinkEspecial">
+            <input type="text" id="data" name="data" placeholder="DD/MM/YY HH:MM" class="drinkEspecial" maxlength="14">
             <br><br><br>
            
            <!-- Linha horizontal -->
@@ -791,7 +783,32 @@ height: 2vh;
     
 
     <script>
+  const inputData = document.getElementById('data');
 
+inputData.addEventListener('input', function() {
+    let value = inputData.value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
+
+    // Adiciona a barra após o dia e o mês
+    if (value.length >= 3) {
+        value = value.slice(0, 2) + '/' + value.slice(2);
+    }
+    if (value.length >= 6) {
+        value = value.slice(0, 5) + '/' + value.slice(5);
+    }
+
+            // Adiciona o espaço entre a data e a hora
+            if (value.length >= 8) {
+                value = value.slice(0, 8) + ' ' + value.slice(8);
+            }
+
+            // Adiciona os dois pontos entre a hora e os minutos
+            if (value.length >= 11) {
+                value = value.slice(0, 11) + ':' + value.slice(11);
+            }
+
+    // Atualiza o valor do campo de input
+    inputData.value = value;
+})
         // Desativa o zoom no foco do campo
 document.querySelector('input, textarea').addEventListener('focus', function() {
   document.body.style.zoom = '1';
@@ -813,7 +830,7 @@ document.querySelector('input, textarea').addEventListener('focus', function() {
 
         function enviarWhatsApp() {
             let nome = document.getElementById("nome").value.trim();
-            let telefone = "553387031225"; // Seu número do WhatsApp com DDD
+            let telefone = "553387031225"; //número do WhatsApp com DDD
             let data= document.getElementById("data").value.trim();
             let cidade= document.getElementById("cidade").value.trim();
             // Captura os serviços selecionados
