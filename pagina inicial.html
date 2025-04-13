@@ -73,7 +73,7 @@
             width: 25%;
             height: 7%;
             margin-left: 13%;
-            bottom: 4%;
+            bottom: 0.2%;
         }
 
         .botao-instagram {
@@ -93,8 +93,15 @@
 
         .logo {
             margin-right: 20px;
-            width: 200px;
-            height: 200px;
+            width: 230px;
+            height: 230px;
+        }
+        .logo1 {
+            position: absolute;
+           right: 75%;
+            width: 175px;
+            height: 220px;
+            margin-top: 6px;
         }
 
         /* Responsividade */
@@ -131,7 +138,7 @@
         <img class="logo" src="logo.jpeg">
         <div class="linha-horizontal"></div>
     </div>
-    
+ 
     <div class="conteudo">
         <h2>Sobre nossos trabalhos:</h2>
         <p style="font-size: 19px;">
@@ -177,7 +184,6 @@
         }
 
         function festa() {
-            let cidade = document.getElementById("cidade").value.trim(); 
             // Abre a próxima página
             window.location.href = "pagina de festas.html";
         }
