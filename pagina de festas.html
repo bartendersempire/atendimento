@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="logo.icon" type="image/x-icon">
+        <title>Organizações de festas</title>
+        <!-- Fonte do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
+    
+        <style>
+            
+            body {
+                background-color: black;
+                font-family: 'Times New Roman', serif;
+                color: rgb(225, 225, 225);
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin-top: 0vh;
+            }
+            form {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            label {
+                display: block;
+                font-size: 22px; /* Aumentando o tamanho dos textos das opções de checkbox */
+                margin-bottom: 8px;
+                text-align: center; /* Centraliza o texto do título */
+            }
+        
+            input {
+                padding: 10px;
+                width: 100%;
+                margin-bottom: 20px; /* Espaço entre os inputs */
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            .teste {
+                font-family: Arial;
+            font-size: 20px;          
+          }
+            .voltar{
+                position: fixed;
+                left: 1vh;
+                top: 1vh;
+                width: 10vh ;
+                height: 5vh;
+                font-size: 20px;
+                border-radius: 5px;
+            }
+            .enviar{
+                position: fixed;
+                width: 20vh;
+                height: 5vh;
+                bottom: 10px;
+                font-size: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 5px;
+            }
+
+
+
+
+           
+            @media screen and (max-width: 1083px) { 
+                .voltar {
+                    width:40%;
+                }
+                .enviar{
+                    width: 30%;
+                    height: 5.7vh;
+                }
+                .texto {
+                    text-size-adjust: 80%;
+                }
+            }
+            
+        </style>
+    </head>
+   
+    <body class="chaves">
+        <h2 > Organização de festas</h2>
+      
+        <a href="pagina inicial.html">
+        <button class="voltar"> <b>Voltar</b> </button>
+        </a>
+        <div>
+            <form>
+            <b> <label for="nome" class="teste">Seu Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" maxlength="30" >
+
+                <label for="local" class="teste">Endereço do Evento:</label>
+                <input type="text" id="local" placeholder="Escolha o endereço do evento">
+                
+                <label for="cidade" class="teste">Cidade:</label>
+                <input type="text" id="cidade" placeholder="Digite a cidade" maxlength="40">
+
+                <label for="dataHora" class="teste">Data e Hora:</label>
+                <input type="text" id="dataHora" placeholder="DD/MM/YY HH:MM" maxlength="14">
+            
+
+                <label for="decoracao" class="teste">Estilo da Decoração:</label>
+                <input type="text" id="decoracao" placeholder="Escolha o estilo da decoração">
+            </b>
+            </form>
+        </div>
+   
+       
+        <button type="button" class="enviar" onclick="enviarWhatsApp()"><b>Enviar </b></button>
+      
+    </body>
+   
+  
+
+    <script>
+        function enviarWhatsApp(){
+            let nome = document.getElementById("nome").value.trim();
+            let local = document.getElementById("local").value.trim();
+            let cidade = document.getElementById("cidade").value.trim();
+            let telefone = "553387031225";//numero de telefone do thiago
+            let dataHora = document.getElementById("dataHora").value.trim();
+            let decoracao = document.getElementById("decoracao").value.trim();
+
+            if (!nome|| !local || !cidade || !dataHora || !decoracao){
+                alert("Por favor preencha todos os campos!!");
+                return;
+            
+            }
+            let mensagem =`Olá, meu nome é ${nome}. Gostaria de solicitar uma decoração para meu evento, que acontecerá na cidade de ${cidade}, no endereço ${local}, na data e hora ${dataHora}. O estilo de decoração desejado é: ${decoracao}. Seria possível realizar esse pedido? Aguardo seu retorno.`;
+            let url= `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`;
+         console.log(url);
+             window.open(url,"_blank");
+        }
+
+
+        const inputDataHora = document.getElementById('dataHora');  
+
+        inputDataHora.addEventListener('input', function() {
+            let value = inputDataHora.value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
+
+            // Adiciona a barra após o dia e o mês
+            if (value.length >= 3) {
+                value = value.slice(0, 2) + '/' + value.slice(2);
+            }
+            if (value.length >= 6) {
+                value = value.slice(0, 5) + '/' + value.slice(5);
+            }
+
+            // Adiciona o espaço entre a data e a hora
+            if (value.length >= 8) {
+                value = value.slice(0, 8) + ' ' + value.slice(8);
+            }
+
+            // Adiciona os dois pontos entre a hora e os minutos
+            if (value.length >= 11) {
+                value = value.slice(0, 11) + ':' + value.slice(11);
+            }
+
+            inputDataHora.value = value; // Atualiza o valor do input
+        });
+    </script>
+    
+</html>
